@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Hero, heroes } from '../hero';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-hero-editor',
@@ -6,10 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./hero-editor.component.css']
 })
 export class HeroEditorComponent implements OnInit {
-  
-  constructor() { }
+  hero: Hero | undefined;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    window.alert('Hero Editor Component Initialized');
+    const routeParams = this.route.snapshot.paramMap;
+    const heroIdFromRoute = Number(routeParams.get('heroId'));
+
+    this.hero = heroes.find(
+      (hero) => hero.id === heroIdFromRoute
+    );
   }
 
 }
