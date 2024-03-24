@@ -1,2 +1,5 @@
-<h2><a [routerLink]="['/hero-editor', hero.id]" routerLinkActive="router-link-active">{{ hero.name | uppercase }}</a></h2>
-<p>{{ hero.description }}</p>
+
+<div *ngFor="let hero of heroes">
+    <h2><a [routerLink]="['/hero-editor', hero.id]" routerLinkActive="router-link-active">{{ hero.name | uppercase }}</a> | Atk: {{ hero.damage }} Hp: {{ hero.health }} </h2>
+    <p>{{ hero.description }}</p>
+</div>

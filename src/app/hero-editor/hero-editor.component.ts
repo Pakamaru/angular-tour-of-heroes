@@ -9,10 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeroEditorComponent implements OnInit {
   hero: Hero | undefined;
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    window.alert('Hero Editor Component Initialized');
     const routeParams = this.route.snapshot.paramMap;
     const heroIdFromRoute = Number(routeParams.get('heroId'));
 

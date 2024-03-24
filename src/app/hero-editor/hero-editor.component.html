@@ -1,1 +1,6 @@
-<p>hero-editor works!</p>
+<h3 *ngIf="hero">Page for hero {{ hero.name }}</h3>
+
+<div *ngIf="hero">
+    <label for="name">Hero name: </label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="Hero name">
+</div>
