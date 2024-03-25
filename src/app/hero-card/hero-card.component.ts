@@ -1,17 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Hero, heroes } from '../hero';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-hero-editor',
-  templateUrl: './hero-editor.component.html',
-  styleUrls: ['./hero-editor.component.css']
+  selector: 'app-hero-card',
+  templateUrl: './hero-card.component.html',
+  styleUrls: ['./hero-card.component.css']
 })
-export class HeroEditorComponent implements OnInit {
+export class HeroCardComponent implements OnInit {
   hero: Hero | undefined;
 
   constructor(private route: ActivatedRoute, private router: Router) { }
-
   ngOnInit(): void {
     const heroIdFromRoute = Number(this.route.snapshot.paramMap.get('heroId'));
 

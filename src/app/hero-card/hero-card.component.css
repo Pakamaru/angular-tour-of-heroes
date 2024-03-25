@@ -1,0 +1,71 @@
+.hero-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #888;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px;
+    width: 300px; /* Increased width for better alignment */
+    background-color: rgba(211, 211, 211, 0.8);
+    font-family: "Press Start 2P", cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: #ffcc00;
+}
+
+.hero-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 20px;
+    margin: 0;
+}
+
+.hero-type {
+    font-size: 14px;
+    color: #888;
+}
+
+.hero-card-image {
+    width: 100px;
+    height: 150px;
+    margin: 16px 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.hero-card-stats {
+    display: flex;
+    justify-content: space-between; /* Align items on the same line with space between */
+    width: 100%;
+}
+
+.hero-stat {
+    display: flex;
+}
+
+.stat-label {
+    margin-right: 8px; /* Add spacing between label and value */
+}
+
+.hero-description {
+    margin-bottom: 16px; /* Add spacing between description and abilities */
+}
+
+.hero-card-abilities {
+    width: 100%;
+}
+
+.abilities-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.abilities-list li {
+    margin-bottom: 8px; /* Add spacing between each ability */
+}
