@@ -1,0 +1,9 @@
+
+<div *ngFor="let hero of heroes" (mouseover)="showDetails(hero, $event)" (mouseout)="hideDetails()" (mousemove)="updateCardPosition($event)">
+    <h2><a [routerLink]="['/hero-editor', hero.id]" routerLinkActive="router-link-active">{{ hero.name | uppercase }}</a> | Atk: {{ hero.damage }} Hp: {{ hero.health }} </h2>
+        {{ hero.description }}
+    <div class="hero-details" *ngIf="selectedHero === hero" [style.top.px]="cardPositionY" [style.left.px]="cardPositionX">
+        <app-hero-card [hero]="selectedHero"></app-hero-card>
+    </div>
+</div>
+

@@ -1,3 +1,5 @@
+import { Ability, abilities } from "./ability";
+
 export interface Hero {
     id: number;
     name: string;
@@ -6,6 +8,7 @@ export interface Hero {
     health: number;
     image?: string;
     level: number;
+    abilities: { ability: Ability, unlockLevel: number }[];
 }
 
 export const heroes = [
@@ -15,8 +18,11 @@ export const heroes = [
         description: "A fearless warrior skilled in close combat.", 
         damage: 10, 
         health: 100, 
-        image: "warrior.png", 
-        level: 1 
+        image: "../../assets/images/warrior.png", 
+        level: 1,
+        abilities: [
+            { ability: abilities.swordSlash, unlockLevel: 1 }
+        ]
     },
 
     { 
@@ -25,8 +31,11 @@ export const heroes = [
         description: "A powerful mage capable of casting devastating spells.", 
         damage: 20, 
         health: 80, 
-        image: "mage.png", 
-        level: 1 
+        image: "../../assets/images/mage.png", 
+        level: 1,
+        abilities: [
+            { ability: abilities.swordSlash, unlockLevel: 1 }
+        ]
     },
 
     { 
@@ -35,8 +44,11 @@ export const heroes = [
         description: "A stealthy rogue specialized in quick strikes and evasion.", 
         damage: 15, 
         health: 90, 
-        image: "rogue.png", 
-        level: 1 
+        image: "../../assets/images/rogue.png", 
+        level: 1,
+        abilities: [
+            { ability: abilities.swordSlash, unlockLevel: 1 }
+        ]
     },
 
     { 
@@ -45,17 +57,10 @@ export const heroes = [
         description: "A skilled archer with deadly accuracy from a distance.", 
         damage: 18, 
         health: 85, 
-        image: "archer.png", 
-        level: 1 
-    },
-
-    { 
-        id: 5, 
-        name: "Paladin", 
-        description: "A holy knight dedicated to protecting the innocent.", 
-        damage: 12, 
-        health: 95, 
-        image: "paladin.png", 
-        level: 1 
+        image: "../../assets/images/archer.png", 
+        level: 1,
+        abilities: [
+            { ability: abilities.swordSlash, unlockLevel: 1 }
+        ]
     }
 ];

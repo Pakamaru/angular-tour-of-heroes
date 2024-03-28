@@ -1,0 +1,27 @@
+<div class="hero-card" *ngIf="hero"> 
+    <div class="hero-card-header">
+        <h2 class="hero-name">{{ hero.name }} <span class="hero-type">type</span></h2>
+    </div>
+    <div class="hero-card-image">
+        <img [src]="hero.image" alt="Hero Image">
+    </div>
+    <div class="hero-card-stats">
+        <div class="hero-stat">
+            <span class="stat-label">Atk:</span>
+            <span class="hero-damage">{{ hero.damage }}</span>
+        </div>
+        <div class="hero-stat">
+            <span class="stat-label">Hp:</span>
+            <span class="hero-health">{{ hero.health }}</span>
+        </div>
+    </div>
+    <div class="hero-card-body">
+        <p class="hero-description">{{ hero.description }}</p>
+        <div class="hero-card-abilities">
+            <h3>Abilities</h3>
+            <ul class="abilities-list">
+                <li *ngFor="let ability of hero.abilities"><strong>{{ ability.ability.name }}: </strong>{{ ability.ability.description }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
