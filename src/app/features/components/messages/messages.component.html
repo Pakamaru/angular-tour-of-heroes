@@ -1,0 +1,9 @@
+<div class="popupMessages">
+    <div class="popupMessage" *ngFor="let message of messageService.messages; let i = index">
+        <div class="message"> {{ message }} </div>
+        <button type="button" class="dismiss-btn"
+                (click)="messageService.clearSingleMessage(i)">Clear message</button>  
+                <button type="button" class="dismiss-btn"
+                (click)="messageService.clear()">Clear all messages</button>  
+    </div>
+</div>

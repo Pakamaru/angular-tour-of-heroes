@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Hero } from '../../models/hero';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Hero } from '../../services/models/hero';
 
 @Component({
   selector: 'app-hero-card',
